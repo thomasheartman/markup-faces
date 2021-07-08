@@ -1,0 +1,5 @@
+* Markup faces fork
+
+This is a fork of [[https://github.com/sensorflo/markup-faces][sensorflo's markup-faces package]]. It exists because
+some of the faces (the meta faces) are nearly illegible in dark themes
+in my setup.
