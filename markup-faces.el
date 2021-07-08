@@ -263,7 +263,7 @@ LaTeX: {\\large foo}"
 
 (defface markup-meta-face
   '((default ( :family "Monospace" ; emacs's faces.el also directly uses "Monospace", so I assume it is safe to do so
-	       :height 90       
+	       :height 1.0
 	       ;; dummy, see doc string
 	       :stipple nil
 	       :inverse-video nil
@@ -274,9 +274,8 @@ LaTeX: {\\large foo}"
 	       :slant normal
 	       :weight normal
 	       :width normal
-	       :foundry "unknown"))
-    (((background light)) (:foreground "gray65"))
-    (((background dark)) (:foreground "gray30")))
+	       :foundry "unknown"
+               :foreground "gray65")))
   "Face for general meta characters and base for special meta characters.
 
 The default sets all face properties to a value because then it's
@@ -305,9 +304,8 @@ easier for major mode to write font lock regular expressions."
 
 (define-obsolete-face-alias 'markup-hide-delimiter-face 'markup-meta-hide-face "23.1")
 (defface markup-meta-hide-face
-  '((default (:inherit markup-meta-face :height 0.8))
-    (((background light)) :foreground "gray75")
-    (((background dark)) :foreground "gray25"))
+  '((default (:inherit markup-meta-face
+                       :foreground "gray55")))
   "For meta characters which can be 'hidden'.
 
 Hidden in the sense of *almost* not visible. They don't need to
